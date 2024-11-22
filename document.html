@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Documentation</title>
+    <link rel="stylesheet" href="document.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>Python Documentation</header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Getting_Started">Getting Started</a>
+        <a class="nav-link" href="#Python_Syntax">Python Syntax</a>
+        <a class="nav-link" href="#Data_Types">Data Types</a>
+        <a class="nav-link" href="#Control_Flow">Control Flow</a>
+        <a class="nav-link" href="#Functions">Functions</a>
+        <a class="nav-link" href="#Object_Oriented_Programming">Object Oriented Programming</a>
+        <a class="nav-link" href="#Modules_and_Packages">Modules and Packages</a>
+        <a class="nav-link" href="#Error_Handling">Error Handling</a>
+        <a class="nav-link" href="#File_Operations">File Operations</a>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>Python is a high-level, interpreted programming language created by Guido van Rossum and released in 1991.</p>
+            <p>Python's design philosophy emphasizes code readability with its notable use of significant whitespace.</p>
+            <p>It provides constructs that enable clear programming on both small and large scales.</p>
+            <ul>
+                <li>Easy to learn and read</li>
+                <li>Large standard library</li>
+                <li>Dynamic type system</li>
+                <li>Automatic memory management</li>
+                <li>Multiple programming paradigms</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Getting_Started">
+            <header>Getting Started</header>
+            <p>To begin using Python, first download and install it from python.org.</p>
+            <p>After installation, you can verify Python is installed by opening a terminal and typing:</p>
+            <code>python --version</code>
+            <p>Create your first Python program by saving this code in a .py file:</p>
+            <code>print("Hello, World!")</code>
+            <p>Run the program from the terminal:</p>
+            <code>python hello.py</code>
+        </section>
+
+        <section class="main-section" id="Python_Syntax">
+            <header>Python Syntax</header>
+            <p>Python uses indentation to define code blocks, instead of curly braces or keywords.</p>
+            <p>Indentation is mandatory in Python code.</p>
+            <code>if True:
+    print("True")
+    if True:
+        print("Nested")
+</code>
+            <p>Python statements often don't need semicolons to indicate end of line.</p>
+            <p>Multi-line statements use backslash or parentheses:</p>
+            <code>total = 1 + \
+        2 + \
+        3
+
+# or
+
+total = (1 +
+         2 +
+         3)</code>
+        </section>
+
+        <section class="main-section" id="Data_Types">
+            <header>Data Types</header>
+            <p>Python has several built-in data types:</p>
+            <code># Numbers
+x = 5       # int
+y = 3.14    # float
+z = 1 + 2j  # complex
+
+# Strings
+name = "Python"
+multiline = '''Multiple
+line string'''
+
+# Lists
+numbers = [1, 2, 3, 4, 5]
+
+# Tuples
+coordinates = (10, 20)
+
+# Dictionaries
+person = {"name": "John", "age": 30}
+
+# Sets
+unique_numbers = {1, 2, 3}</code>
+            <p>Variables are dynamically typed:</p>
+            <code>x = 5       # x is an integer
+x = "Hello"  # now x is a string</code>
+            <p>Type conversion functions:</p>
+            <code>str(123)    # Convert to string
+int("123")   # Convert to integer
+float("3.14") # Convert to float</code>
+        </section>
+
+        <section class="main-section" id="Control_Flow">
+            <header>Control Flow</header>
+            <p>Control flow is handled using if statements, loops, and conditional expressions.</p>
+            <p>If statements:</p>
+            <code>age = 18
+if age < 13:
+    print("Child")
+elif age < 20:
+    print("Teenager")
+else:
+    print("Adult")</code>
+            <p>For loops:</p>
+            <code>for i in range(5):
+    print(i)
+
+for item in ["apple", "banana", "orange"]:
+    print(item)</code>
+            <p>While loops:</p>
+            <code>count = 0
+while count < 5:
+    print(count)
+    count += 1</code>
+        </section>
+
+        <section class="main-section" id="Functions">
+            <header>Functions</header>
+            <p>Functions are defined using the def keyword:</p>
+            <code>def greet(name):
+    return f"Hello, {name}!"
+
+print(greet("Python"))</code>
+            <p>Functions can have default parameters:</p>
+            <code>def power(x, exponent=2):
+    return x ** exponent
+
+print(power(2))      # 4
+print(power(2, 3))   # 8</code>
+            <p>Lambda functions for simple operations:</p>
+            <code>square = lambda x: x ** 2
+print(square(5))  # 25</code>
+        </section>
+
+        <section class="main-section" id="Object_Oriented_Programming">
+            <header>Object Oriented Programming</header>
+            <p>Python is an object-oriented programming language.</p>
+            <p>Classes are defined using the class keyword:</p>
+            <code>class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def greet(self):
+        return f"Hello, I'm {self.name}"
+
+person = Person("Alice", 30)
+print(person.greet())</code>
+            <p>Inheritance is supported:</p>
+            <code>class Student(Person):
+    def __init__(self, name, age, grade):
+        super().__init__(name, age)
+        self.grade = grade</code>
+        </section>
+
+        <section class="main-section" id="Modules_and_Packages">
+            <header>Modules and Packages</header>
+            <p>Python code can be organized into modules and packages.</p>
+            <p>Import statements are used to include modules:</p>
+            <code>import math
+print(math.pi)
+
+from datetime import datetime
+print(datetime.now())
+
+import random as rd
+print(rd.randint(1, 6))</code>
+            <p>Creating your own module:</p>
+            <code># mymodule.py
+def greet(name):
+    return f"Hello, {name}!"
+
+# main.py
+import mymodule
+print(mymodule.greet("Python"))</code>
+        </section>
+
+        <section class="main-section" id="Error_Handling">
+            <header>Error Handling</header>
+            <p>Python uses try/except blocks for error handling:</p>
+            <code>try:
+    x = int("abc")
+except ValueError:
+    print("Invalid conversion")
+except Exception as e:
+    print(f"Error: {e}")
+else:
+    print("No error occurred")
+finally:
+    print("This always runs")</code>
+            <p>Raising exceptions:</p>
+            <code>def divide(a, b):
+    if b == 0:
+        raise ValueError("Cannot divide by zero")
+    return a / b</code>
+        </section>
+
+        <section class="main-section" id="File_Operations">
+            <header>File Operations</header>
+            <p>Python can read from and write to files:</p>
+            <code># Writing to a file
+with open("file.txt", "w") as f:
+    f.write("Hello, World!")
+
+# Reading from a file
+with open("file.txt", "r") as f:
+    content = f.read()
+    print(content)</code>
+            <p>Working with CSV files:</p>
+            <code>import csv
+
+with open("data.csv", "w") as f:
+    writer = csv.writer(f)
+    writer.writerow(["Name", "Age"])
+    writer.writerow(["Alice", 30])</code>
+            <p>File modes include:</p>
+            <ul>
+                <li>"r" - Read (default)</li>
+                <li>"w" - Write (overwrites)</li>
+                <li>"a" - Append</li>
+                <li>"b" - Binary mode</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

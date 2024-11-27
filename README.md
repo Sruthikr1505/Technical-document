@@ -1,1 +1,2 @@
+#Technical-document
 THIS DOCUMENT HELPS TO LEARN PYYTHON
